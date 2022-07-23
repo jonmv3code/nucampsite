@@ -36,8 +36,7 @@
             <h2>a better way to camp</h2>
           </div>
           <div class="col-md-4 col-xl-2 align-self-center">
-            <a class="btn btn-lg btn-info text-nowrap" href="#reserveForm" role="button" data-html="true"
-           data-toggle="">
+            <a class="btn btn-lg btn-info text-nowrap" data-toggle="modal" data-target="#reserveModal" role="button" data-html="true" data-toggle="">
               Reserve Campsite
             </a>
           </div>
@@ -45,6 +44,64 @@
       </div>
     </header>
     <!-- End of Header -->
+    <!-- Start of Reserve button modal -->
+    <div id="reserveModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+              <div class="modal-header bg-info text-white">
+                  <h3 class="modal-title">Reserve a Campsite</h3>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                  <div class="container-fluid">
+                    <form id="reserveForm">
+                      <div class="row form-group">
+                        <label class="col col-form-label" for="nuCampers">Number of Campers</label>
+                        <div class="col-sm-6">
+                          <select class="col-form-label form-control" id="nuCampers">
+                            <option selected value="">Select</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                          </select>
+                        </div>
+                      </div>
+                        <div class="row form-group">
+                         <label class="col-sm-6 col-form-label" for="date">Date</label>
+                         <div class="col-sm-6">
+                           <input class="form-control" type="date" placeholder="value" id="date">
+                         </div>
+                       </div>
+                       <div class="row form-group">
+                        <label class="col-sm-6 col-form-label" for="campsite">Campsite Type</label>
+                        <div class="col-2">
+                          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-success">
+                              <input type="checkbox" checked autocomplete="off" name="siteType">Tent
+                            </label>
+                            <label class="btn btn-primary">
+                              <input type="checkbox" checked autocomplete="off" name="siteType">RV
+                            </label>
+                            
+                          </div>
+                        </div>
+                       </div>
+                       <div class="row form-group">
+                        <div class="col">
+                          <button class="btn btn-secondary" type="submit" data-dismiss="modal">Cancel</button>
+                          <button class="btn btn-primary" type="submit">Search</button>
+                        </div>
+                       </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- End of Reserve button modal -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
       <div class="container">
@@ -69,44 +126,44 @@
         </div>
       </div>
     </nav>
-<!-- Start of modal -->
-<div id="loginModal" class="modal fade" role="dialog">
-  <div class="modal-dialog" role="document">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h3 class="modal-title">Login</h3>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-              <div class="container-fluid">
-                  <form>
-                      <div class="form-row">
-                          <div class="form-group col-12">
-                              <label class="sr-only" for="loginEmail">Email address</label>
-                              <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
-                          </div>
-                          <div class="form-group col-12">
-                              <label class="sr-only" for="loginPassword">Password</label>
-                              <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
-                          </div>
-                          <div class="col">
-                              <div class="form-check">
-                                  <input class="form-check-input" type="checkbox">
-                                  <label class="form-check-label"> Remember me</label>
+<!-- Start of log in modal -->
+    <div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h3 class="modal-title">Login</h3>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                  <div class="container-fluid">
+                      <form>
+                          <div class="form-row">
+                              <div class="form-group col-12">
+                                  <label class="sr-only" for="loginEmail">Email address</label>
+                                  <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                              </div>
+                              <div class="form-group col-12">
+                                  <label class="sr-only" for="loginPassword">Password</label>
+                                  <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                              </div>
+                              <div class="col">
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="checkbox">
+                                      <label class="form-check-label"> Remember me</label>
+                                  </div>
                               </div>
                           </div>
-                      </div>
-                      <div class="form-row">
-                          <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                          <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                      </div>
-                  </form>
+                          <div class="form-row">
+                              <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                              <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                          </div>
+                      </form>
+                  </div>
               </div>
           </div>
       </div>
-  </div>
-</div>
-<!-- End of modal -->
+    </div>
+<!-- End of log in modal -->
     <!-- End of Navbar -->
     <div class="container">
       <div class="row row-content">
@@ -117,7 +174,6 @@
               <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
               <li data-target="#homeCarousel" data-slide-to="1"></li>
               <li data-target="#homeCarousel" data-slide-to="2"></li>
-              
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -202,43 +258,6 @@
                 Bootstrap Outfitters supplies you with gear you need at prices you
                 can't beat.</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <div class="row row-content">
-        <div class="col-sm-6 mx-auto">
-          <div class="card">
-            <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
-            <div class="card-body">
-             <form id="reserveForm">
-              <div class="row form-group">
-                <label class="col col-form-label" for="nuCampers">Number of Campers</label>
-                <div class="col-sm-6">
-                  <select class="col-form-label form-control" id="nuCampers">
-                    <option selected value="">Select</option>
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
-                    <option value="">5</option>
-                    <option value="">6</option>
-                  </select>
-                </div>
-              </div>
-                <div class="row form-group">
-                 <label class="col-sm-6 col-form-label" for="date">Date</label>
-                 <div class="col-sm-6">
-                   <input class="form-control" type="date" placeholder="value" id="date">
-                 </div>
-               </div>
-               <div class="row form-group">
-                <div class="col">
-                  <button class="btn btn-primary" type="submit">Search</button>
-                </div>
-               </div>
-              </form>
             </div>
           </div>
         </div>

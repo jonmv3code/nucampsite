@@ -16,14 +16,16 @@ body {
   h1,
   h2,
   h3 {
-    font-family: $header-font
+    font-family: $header-font;
   }
   
   h2 {
-    color: $color-primary
+    color: $color-primary;
   }
-  header h2 {
+  header {
+    h2 {
     color: $color-pale;
+    }
   }
   
   .site-footer {
